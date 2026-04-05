@@ -1,0 +1,161 @@
+:root {
+  --text-dark: #121432;
+  /* Màu xanh đen đậm của tiêu đề */
+  --text-gray: #7d7f9a;
+  /* Màu xám của domain/stats */
+  --primary-blue: #7f97ff;
+  /* Màu avatar IG */
+  --active-bg: #f8f6ff;
+  /* Màu nền tím nhạt khi active */
+  --border-light: #e8e9f1;
+  /* Màu border search bar */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  min-width: 1200px;
+  /* Đảm bảo ổn định trên màn hình > 1200px */
+}
+
+.dashboard-wrapper {
+  width: 900px;
+  padding: 40px 0;
+}
+
+/* --- HEADER --- */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--text-gray);
+}
+
+.search-container input {
+  padding: 10px 15px 10px 40px;
+  border: 1.5px solid var(--border-light);
+  border-radius: 8px;
+  width: 280px;
+  font-size: 14px;
+  outline: none;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.notification-btn {
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-blue);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* --- MAIN --- */
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+.account-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.account-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  border-radius: 16px;
+  transition: background 0.2s;
+}
+
+/* Trạng thái được chọn (Dropbox) */
+.account-item.active {
+  background-color: var(--active-bg);
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 2;
+  /* Chiếm nhiều không gian hơn */
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.brand-domain {
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+.account-stats {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 500;
+  text-align: left;
+}
+
+.action-menu {
+  background: none;
+  border: none;
+  color: #bcbdd0;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.action-menu:hover {
+  color: var(--text-dark);
+}
